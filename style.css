@@ -10,12 +10,12 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Main Content */
+
 main {
   margin-left: 210px;
 }
 
-/* Header */
+
 header {
   background-color: #FF0000; 
   padding: 20px;
@@ -33,7 +33,7 @@ header p {
   margin: 0;
 }
 
-/* Navigation Buttons inside header nav */
+
 header nav {
   display: flex;
   flex-direction: column;
@@ -69,7 +69,7 @@ header nav button:hover {
   background-color: #0000CC;
 }
 
-/* Jump Menu Dropdown */
+
 body > nav#jumpMenu {
   width: 210px;
   background-color: #DAA520; 
@@ -78,14 +78,14 @@ body > nav#jumpMenu {
   border-top: 3px solid #000;
   position: fixed;
   left: 0;
-  top: 58px; /* Position below Recent Articles button */
+  top: 58px; 
   max-height: 0;
   overflow: hidden;
   z-index: 65;
   transition: max-height 0.4s ease-in-out;
 }
 
-/* Show jump menu when hovering over Recent Articles button or jump menu itself */
+
 header nav button:first-child:hover + body > nav#jumpMenu,
 body:has(header nav button:first-child:hover) > nav#jumpMenu,
 body > nav#jumpMenu:hover {
@@ -123,7 +123,7 @@ body > nav#jumpMenu:hover {
   display: none;
 }
 
-/* Push other buttons down when jump menu is visible */
+
 header nav button:nth-child(2) {
   margin-top: 0;
   transition: margin-top 0.4s ease-in-out;
@@ -142,14 +142,14 @@ header nav button:last-child {
   border-bottom: 3px solid #000;
 }
 
-/* Black space below navigation buttons */
+
 header nav::after {
   content: '';
   background-color: #000;
   flex-grow: 1;
 }
 
-/* Heading */
+
 h1 {
   text-align: center;
   font-size: 48px;
@@ -157,7 +157,7 @@ h1 {
   margin-top: 120px; 
 }
 
-/* Article Container */
+
 #container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -166,7 +166,7 @@ h1 {
   padding-bottom: 200px; 
 }
 
-/* Articles */
+
 article {
   padding: 15px;
   transition: background-color 0.2s;
@@ -202,7 +202,7 @@ article:hover p {
   color: #000;
 }
 
-/* First letter styling for article paragraphs - only paragraphs without links */
+
 article p:not(:has(a))::first-letter {
   font-family: 'Times New Roman', Times, serif;
   font-size: 36px;
@@ -212,7 +212,7 @@ article p:not(:has(a))::first-letter {
   margin-top: 3px;
 }
 
-/* Paragraph containing Read More link */
+
 article p:has(a) {
   text-align: right;
 }
@@ -224,7 +224,7 @@ article a {
   text-align: right;
 }
 
-/* Arrow icon for all Read More links */
+
 article p a::after {
   content: '';
   display: inline-block;
@@ -238,7 +238,7 @@ article p a::after {
   vertical-align: middle;
 }
 
-/* Thank You Block */
+
 #thanks {
   background-color: #87CEEB;
   text-align: center;
@@ -253,7 +253,7 @@ article p a::after {
   border-radius: 8px;
 }
 
-/* Footer */
+
 footer {
   background-color: #333;
   color: white;
@@ -288,7 +288,7 @@ address a {
   text-decoration: none;
 }
 
-/* Responsive Grid */
+
 @media (min-width: 1600px) {
   #container {
     grid-template-columns: repeat(4, 1fr);
@@ -305,4 +305,5 @@ address a {
   #container {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
